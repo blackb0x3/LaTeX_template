@@ -1,5 +1,77 @@
-\documentclass{article}
+\documentclass[a4paper]{article}
+
+%% Language and font encodings
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+
+%% Sets page size and margins
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+%% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{ {/path/to/a/folder/}{/path/to/another/folder/}  }
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\usepackage{fullpage}
+
+%% fancy headers at the to of each page
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Right Header}
+\rfoot{\thepage}
+
+%% special table package controlling table sizes automatically
+\usepackage{tabu}
+
+\title{Document Name}
+\author{Document Author}
 
 \begin{document}
-Hello World.
+    \maketitle
+    \newpage
+    \tableofcontents
+    \listoffigures
+    \listoftables
+    \newpage
+    \section{Section 1}
+        This is a line of text.\\
+        And so is this.\\
+        And this.\\
+        \\
+        Below is a paragraph of bog standard Lorem Ipsum:\\
+        \subsection{Section 1.1}
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget condimentum ligula. Sed ac interdum dolor. Vivamus vehicula diam ut consequat commodo. Sed vitae tellus blandit, tincidunt erat a, iaculis massa. Integer non lorem non ex consequat molestie vel vitae sem. Sed id sapien euismod, congue diam eget, vestibulum metus. Sed libero tortor, volutpat sed rutrum sit amet, ultricies vitae metus.\\
+            Nunc molestie, lacus eget congue vestibulum, tortor massa mollis mauris, in aliquet risus lectus quis felis. Curabitur imperdiet nisl ut metus feugiat facilisis. Mauris porta ex eu dui ornare convallis. Nunc euismod ex orci, in venenatis justo porttitor pharetra.
+        \subsection{Section 1.2}
+            Table \ref{table:example} is an example table containing rows and columns with an emulated header.
+            \begin{center}
+                \begin{table}[h] % h for 'h'ere
+                    \begin{tabu} to 0.8\textwidth { | X[l] | X[l] | }
+                        \hline
+                        \textbf{Header 1} & \textbf{Header 2}\\
+                        \hline
+                        Cell 1 & Cell 2\\
+                        \hline
+                    \end{tabu}
+                    \caption{Example table using the tabu package.}
+                    \label{table:example}
+                \end{table}
+            \end{center}
+            \subsubsection{Section 1.2.1}
+        \subsection{Section 1.3}
+            Figure \ref{figure:example} shows a figure containing the quadratic formula, which is not viable when the lowest point of the graph is greater than zero.
+            \begin{center}
+                \begin{figure}[h] % h for 'h'ere
+                    \begin{equation}
+                        x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
+                    \end{equation}
+                    \caption{The classic formula for solving quadratic equations.}
+                    \label{figure:example}
+                \end{figure}
+            \end{center}
+    \section{Section 2}
 \end{document}
