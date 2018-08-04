@@ -1,2 +1,2 @@
 # LaTeX_template
-Personal document template I use for LaTeX documents
+Basic document template I use for LaTeX documents and reports.
